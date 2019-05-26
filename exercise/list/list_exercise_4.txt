@@ -1,0 +1,21 @@
+We'll add two more basic functions to our API.
+
+1 - Given two singly linked list find whether they're identical or not. Two
+linked lists are identical when they have the same data in the same order.
+
+// Return true if both linked lists are identical else return false.
+bool areIdentical(Node *head1, Node *head2)
+
+2 - Find the node at the given index (1 based index) of linked list. The caller
+needs to ensure that the index <= length of the list.
+
+// Returns data of node at given index.
+//
+// This function assumes that there are at least index number of nodes in linked
+// list.
+int getNth(Node* head, int index)
+
+
+After testing locally, submit the solution at the following links respectively:
+1 - https://practice.geeksforgeeks.org/problems/identical-linked-lists/1.
+2 - https://practice.geeksforgeeks.org/problems/node-at-a-given-index-in-linked-list/1
