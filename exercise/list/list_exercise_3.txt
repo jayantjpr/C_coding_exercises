@@ -1,0 +1,20 @@
+In this exercise, we'll update the API to take care of updating the head pointer
+of the singly linked list. Instead of accepting a pointer to the head node, the
+API methods should accept a pointer to pointer of the head node (Node **head)
+and update the pointer to the head node from within the API call. e.g.:
+
+// Adds a new Node with the given data at the front of the list and returns a
+// pointer to the new node.
+//
+// Passing NULL head creates a new list.
+Node* push_front(Node** head, int data);
+
+The caller would then could then use the API as follows to print the list
+0 -> 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9:
+
+int n = 10;
+Node* head = NULL;
+while(n--) {
+  push_front(&head, n);
+}
+print(head);
