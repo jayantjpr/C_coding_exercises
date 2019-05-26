@@ -1,0 +1,39 @@
+Create a singly list of integer in C with the following API:
+
+// Node in a singly linked list.
+struct Node {
+	int data;
+	Node* next;
+};
+
+// Adds a new Node with the given data at the front of the list and returns a
+// pointer to the new node.
+//
+// Passing NULL head creates a new list.
+Node* push_front(Node* head, int data);
+
+// Appends a new Node with the given data at the back of the list and returns a
+// pointer to the new node.
+//
+// Passing NULL head creates a new list.
+Node* push_back(Node* head, int data);
+
+// Removes the element at the front of the list and returns a pointer to removed
+// node.
+Node* pop_front(Node* head)
+
+// Removes the element at the back of the list and returns a pointer to removed
+// node.
+Node* pop_back(Node* head)
+
+// Gets pointer to tail of the list.
+Node* tail(Node* head);
+
+The API has a number of drawback, some of which are:
+- The caller of this API would need to update the pointer to the head Node of
+  the list as updates to the list are made.
+- The data is restricted to integer only.
+- The caller have the task to free up memory for removed Nodes.
+- The caller could accidently change the next pointer of a Node.
+We'll address some of these drawbacks in the upcoming exercises. We'll also add
+more list operation to develop better understanding about lists and pointers.
